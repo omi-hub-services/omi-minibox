@@ -1,6 +1,6 @@
 # Onboarding plan (new project)
 
-Workflow: `.omi-squad/workflows/onboarding-empty-repo.yaml`
+Workflow: `.omi/workflows/onboarding-empty-repo.yaml`
 
 ## Detected
 

@@ -1,5 +1,8 @@
 {
-  "distribution": "Ubuntu-24.04",
-  "repository": "/home/ttin/github/omi-minibox",
-  "shim": "/home/ttin/github/omi-minibox/.omi-squad/bin/omi"
+  "distribution": "docker",
+  "docker": {
+    "container": "omi-omi-minibox"
+  },
+  "repository": "/work/omi-minibox",
+  "shim": "/work/omi-minibox/.omi/bin/omi"
 }

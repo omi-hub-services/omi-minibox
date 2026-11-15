@@ -1,0 +1,28 @@
+{
+  "$schema": "./tool/node_modules/omi-squad/schemas/omisetting.schema.json",
+  "version": 1,
+  "github": {
+    "token": "FAKE_GITHUB_TOKEN_REPLACE_ME",
+    "gitUser": {
+      "name": "omi-bot",
+      "email": "omi-bot@example.com"
+    }
+  },
+  "profiles": [
+    {
+      "id": "claude-main",
+      "tool": "claude",
+      "auth": {
+        "type": "token",
+        "token": "FAKE_CLAUDE_TOKEN_REPLACE_ME"
+      }
+    },
+    {
+      "id": "codex-main",
+      "tool": "codex",
+      "auth": {
+        "type": "login"
+      }
+    }
+  ]
+}
