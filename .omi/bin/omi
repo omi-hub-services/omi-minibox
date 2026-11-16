@@ -3,7 +3,7 @@
 set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)
 cd -- "$root"
-node='/home/ttin/.nvm/versions/node/v24.22.2/bin/node'
+node='C:\nvm4w\nodejs\node.exe'
 if [ ! -x "$node" ]; then
   node=$(command -v node) || {
     printf '%s\n' 'omi: Node.js not found; reinstall omi-squad using a working Node.js, or configure node on PATH.' >&2
@@ -11,11 +11,11 @@ if [ ! -x "$node" ]; then
   }
 fi
 # npm worker launchers use /usr/bin/env node; the runtime and its children need this PATH too.
-worker_dirs='/home/ttin/.local/bin:/home/ttin/.nvm/versions/node/v24.22.2/bin'
+worker_dirs=''
 PATH="${worker_dirs:+$worker_dirs:}$(dirname -- "$node")${PATH:+:$PATH}"
 export PATH
 # Internal modes use the same pinned interpreter. They accept exactly these argv and run nothing else.
-runtime="$root/.omi-squad/tool/node_modules/omi-squad/dist/bootstrap/runtime.js"
+runtime="$root/.omi/tool/node_modules/omi-squad/dist/bootstrap/runtime.js"
 case "${1-}" in
   --omi-worker-version)
     if [ "$#" -ne 2 ]; then
@@ -39,4 +39,4 @@ case "${1-}" in
     exec "$node" "$runtime" "$root"
     ;;
 esac
-exec "$node" "$root/.omi-squad/tool/node_modules/omi-squad/dist/bootstrap/cli.js" "$@"
+exec "$node" "$root/.omi/tool/node_modules/omi-squad/dist/bootstrap/cli.js" "$@"

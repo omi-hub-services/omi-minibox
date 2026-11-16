@@ -1,2 +1,3 @@
-.omi-squad/local/
-.omi-squad/tool/node_modules/
+.omi/local/
+.omi/tool/node_modules/
+/.omi/omisetting.local.json
