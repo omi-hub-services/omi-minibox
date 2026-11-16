@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "version": "0.1.1",
-  "artifactHash": "bfdb08064b7b454fa982ff13c84b18b8d5aaf03e9c94636a76e0aa9636a518d5",
+  "artifactHash": "a1436bdcec90b1334be55570f6322e14ec83a082275258aeed9a20950b4f3ddd",
   "docker": {
     "container": "omi-omi-minibox"
   },
